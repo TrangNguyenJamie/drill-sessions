@@ -16,21 +16,34 @@ The following material is recommended as a reference, but not limited to:
 - [Linux Journey](https://labex.io/lesson/the-shell)
 
 1. Turn on a terminal program on your machine. Type in `whoami` in the terminal. What do you see?
-- Answer:
+- Answer: My username of the current session each machine. e.g.:
+    + Window PowerShell/Command Prompt: ```rna\trang.nguyen```
+    + WSL: root
 
 2. Move to the cloned repository of the drill sessions in your machine (namely, move to the directory `drill-sessions`). As specified in the main `README.md` of the repo, it is located in your `$HOME` directory. If you don't know what is `$HOME` directory, it is the very first directory that your terminal starts at. Type in `pwd`. What do you see?
-- Answer:
+- Answer: The path of the current directory. e.g.:
+    + ```/C/Users/trang.nguyen/.../drill-sessions```
 
 3. Make a new directory under `sessions/session-01/` with the name `mydir` and create an empty text file `mytext.txt` under it. 
-- Which command did you use to move into `sessions/session-01/`? Answer:
-- Which command did you use to create `mydir`? Answer:
-- Which command did you use to create `mytext.txt`? Answer:
+- Which command did you use to move into `sessions/session-01/`? Answer: ```cd sessions/session-01/```
+- Which command did you use to create `mydir`? Answer: ```mkdir mydir```
+- Which command did you use to create `mytext.txt`? Answer: ```touch mydir/mytext.txt```
 
 4. Copy `mydir` and `mytext.txt` all together under the same `session-01/` directory with the name `copy_mydir`, but with using only one line of command. What did you use?
-- Answer:
+- Answer: ```cp -r mydir copy_mydir```
 
 5. Move the file `mytext.txt` under `copy_mydir`, and type in `ls` under `sessions/session-01/` directory. What do you see?
-- Answer: 
+- Answer: ```mv 
+    + Status quo: The folder tree now is like:
+
+            .
+            ├── mydir
+            │   └── mytext.txt
+            └── copy_mydir
+                └── mytext.txt
+    + Assumption: 
+
+
 
 ### 2. Git
 Consider the following references first:
