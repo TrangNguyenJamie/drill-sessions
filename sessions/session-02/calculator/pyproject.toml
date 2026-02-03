@@ -1,0 +1,11 @@
+[project]
+name = "calculator"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.12"                # change this to your current python version
+dependencies = []                         # this is where your dependencies are added
+
+[tool.uv.workspace]
+members = [
+    "upper",
+]
