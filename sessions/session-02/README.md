@@ -20,20 +20,22 @@ Type "help", "copyright", "credits" or "license" for more information.
 ```
 
 Type `import this` and press Enter. What do you see? 
-Answer:
+Answer: A poem of Commandment?
+    ```The Zen of Python, by Tim Peters```
 
 2. The above interface represented by the `>>>` symbol in the terminal is what we call "REPL (Read-Eval-Print Loop)" environment. You can write and execute a single line of Python code directly and see the result immediately. For sure, this is a good tool for simple execution and debugging, but not for some bigger applications. Type `quit` and press Enter to exit the environment. 
 
 Now we want to run a single Python code using the interpreter itself. But before then, let's check the version of the current Python interpreter. 
 
 Run `python -V` or `python3 -V` in the terminal. What do you see?
-Answer:
+Answer: `Python 3.13.11`
 
 
 3. For the conciseness of the explanation, we will use `python` instead of `python3`. If `python` doesn't work on your machine, run `python3` instead of `python`. The other parts of each command should not be changed. 
 
 Next, run `python -c "import os; print(os.getcwd())"`. What do you see?
-Answer:
+Answer: Path to current working directory. e.g.: ...\drill-sessions\sessions\session-02
+
 
 `python` with the `-c` flag indicates the interpreter that the following string should be interpreted as Python code to be executed.
 
@@ -55,7 +57,7 @@ print("\n\nThis is Zen of Python!")
 ```
 
 Now run `python zen.py`. What do you see?
-Answer:
+Answer: The whole full version of the Commandment following by a note affirming how very Zen it is.
 
 2. Run a Python module selectively
 As you saw in the previous exercise, running a module executes all the lines in the file. However, on many occasions we only want to run certain logic depending on the current situation. Hence, it is always recommended to wrap the code in functions and classes within a module.
@@ -138,6 +140,8 @@ dependencies = [] # this is where your dependencies are added
 
 Run the following command first: `source .venv/bin/activate`. You'll see that there is an additional string `(.venv)` in your terminal. That indicates your Python interpreter will work within the current virtual environment. 
 
+`NOTE: For me, it's source .venv/Scripts/activate`
+
 And then you specify the dependency inside the `dependencies` array in the `pyproject.toml` file, as follows:
 
 ```toml
@@ -145,7 +149,7 @@ dependencies = ["numpy"]
 ```
 
 Now add the dependency by running the following command `pip install .` (or `pip3 install numpy .` if `pip` doesn't work on your machine). From the message on your terminal, you will get the version of `numpy` that is just added. What is the version of your numpy?
-Answer:
+Answer: `numpy 2.4.2`
 
 ## 4. Introducing UV - a tool for managing an entire Python project
 As you saw in the previous exercise, you have to go through several steps to bootstrap a single Python project. For sure, it is a lot of work, and people have invented *dependency management tools* for Python, such as Pipenv, Poetry, or PDM, to name a few. Among those, the most popular tool these days is obviously [uv](https://docs.astral.sh/uv/). uv is actually more than a simple dependency management tool. You can also install and pin the version of the Python interpreter for a specific project! So from now on, once you install uv, then you won't ever need to install Python separately.
@@ -158,6 +162,8 @@ First, [install uv](https://docs.astral.sh/uv/getting-started/installation/). On
 Hint: Reference the following pages:
 - https://docs.astral.sh/uv/guides/projects/
 - https://docs.astral.sh/uv/reference/cli/#uv-init--python
+
+Answer:    `uv init first-project --python 3.14`
 
 2. Next, create a virtual environment *manually*, but this time using uv. 
 Reference this page: https://docs.astral.sh/uv/pip/environments/

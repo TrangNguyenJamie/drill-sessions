@@ -18,7 +18,7 @@ def wait_for_oracle():
 
     for step in steps:
         print_word_by_word(step)
-        time.sleep(0.8)  # Pause for dramatic effect
+        time.sleep(0.4)  # Pause for dramatic effect
 
     time.sleep(1)
     input("\nPress Enter when you are ready to hear the oracle's wisdom...")
