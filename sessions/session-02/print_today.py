@@ -1,6 +1,9 @@
+from datetime import date
+
 def print_today() -> str:
-    # TODO: write your code here
-    raise NotImplementedError()
+    today = date.today().isoformat()
+    print(today)
+
 
 
 if __name__ == "__main__":
